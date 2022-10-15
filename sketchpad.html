@@ -6,17 +6,19 @@
         <link rel="stylesheet" href="sketchpad-styles.css">
     </head>
     <body>
-        <div class="grid-container"></div>
-        <div class="buttons-container">
-            <div>
-                <button class="clearButton">Clear Sketchpad</button>
-            </div>
-            <div class="gridValue">
-                <p class="gridValueDisplay"></p>
-                <input class="gridValueButton" type="range" min="2" max="100" value="16" step="2">
-                <button class="remakeGrid">Recreate Sketchpad</button>
-            </div>
-        </div>
+        <header>
+            <nav>
+                <div class="buttons-container">
+                    <p class="gridValueDisplay"></p>
+                    <input class="gridValueButton" type="range" min="2" max="100" value="16" step="2">
+                    <button class="remakeGrid">Recreate Sketchpad</button>
+                    <button class="clearButton">Clear Sketchpad</button>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="grid-container"></div>
+        </main>
         <script src="sketchpad-logic.js"></script>
     </body>
 </html>

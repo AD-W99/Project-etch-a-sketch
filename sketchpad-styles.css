@@ -1,28 +1,29 @@
 body {
+    margin: 0;
+}
+
+nav {
+    background-color: #313639;
+    padding: 2rem;
+}
+
+main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
+    justify-content: center;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    height: 400px;
-    width: 400px;
+    /* grid-template assigned via JS */
+    width: 600px;
+    height: 600px;
+    margin: 2rem;
+    border: 1px solid #313639;
 }
 
 .buttons-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.gridValue {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 8px;
 }

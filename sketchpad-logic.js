@@ -8,11 +8,12 @@ function makeGrid() {
         div.style.backgroundColor = "grey";
         div.classList.add('square');
         gridContainer.appendChild(div);
-        gridContainer.addEventListener('mouseover', function(e){
-            e.target.style.backgroundColor = "black";
-        });
-        gridContainer.style.gridTemplate = `repeat(${gridDimensions}, 1fr) / repeat(${gridDimensions}, 1fr)`;
     }
+
+    gridContainer.style.gridTemplate = `repeat(${gridDimensions}, 1fr) / repeat(${gridDimensions}, 1fr)`;
+    gridContainer.addEventListener('mouseover', function(e){
+        e.target.style.backgroundColor = "black";
+    });
 }
 
 makeGrid();
