@@ -1,5 +1,3 @@
-/* https://stackoverflow.com/questions/57546807/how-to-pass-in-a-variable-to-the-css-grid-repeat-function */
-
 const gridContainer = document.querySelector('.grid-container');
 const clearButton = document.querySelector('.clearButton');
 let gridDimensions = 16;
