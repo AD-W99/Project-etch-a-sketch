@@ -14,7 +14,27 @@ function makeGrid() {
     gridContainer.style.gridTemplate = `repeat(${gridDimensions}, 1fr) / repeat(${gridDimensions}, 1fr)`;
     gridContainer.addEventListener('mouseover', function(e){
         if (!isEraseTrue) {
-            e.target.style.backgroundColor = "#313639";
+            if (colorRed.value < 0) {
+                colorRed.value = 0;
+            }
+            if (colorGreen.value < 0) {
+                colorGreen.value = 0;
+            }
+            if (colorBlue.value < 0) {
+                colorBlue.value = 0;
+            }
+
+            if (colorRed.value > 255) {
+                colorRed.value = 255;
+            }
+            if (colorGreen.value > 255) {
+                colorGreen.value = 255;
+            }
+            if (colorBlue.value > 255) {
+                colorBlue.value = 255;
+            }
+
+            e.target.style.backgroundColor = `rgb(${colorRed.value}, ${colorGreen.value}, ${colorBlue.value})`;
         } else {
             e.target.style.backgroundColor = "whitesmoke";
         }
@@ -59,4 +79,25 @@ eraseButton.addEventListener('click', () => {
     } else {
         eraseButton.style.backgroundColor = "#313639"
     }
-})
+});
+
+const rgbColorPicker = document.querySelector('.rgb');
+const colorRed = document.querySelector('.color-red');
+const colorGreen = document.querySelector('.color-green');
+const colorBlue = document.querySelector('.color-blue');
+
+function changeColorPicker() {
+    rgbColorPicker.style.color = `rgb(${colorRed.value}, ${colorGreen.value}, ${colorBlue.value})`;
+}
+
+colorRed.onchange = () => {
+    changeColorPicker();
+}
+
+colorGreen.onchange = () => {
+    changeColorPicker();
+}
+
+colorBlue.onchange = () => {
+    changeColorPicker();
+}

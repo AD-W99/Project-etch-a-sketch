@@ -9,7 +9,7 @@ header {
 
 nav {
     background-color: white;
-    padding: 2rem 0 1rem;
+    padding: 1rem 0;
     border-bottom: 1px solid lightgray;
     position: fixed;
     top: 0;
@@ -20,7 +20,7 @@ main {
     display: flex;
     justify-content: center;
     background-color: ghostwhite;
-    margin-top: 9rem;
+    margin-top: 8.2rem;
 }
 
 .grid-container {
@@ -59,8 +59,22 @@ main {
     border-radius: 0.5rem;
 }
 
-.eraser {
-    cursor: crosshair;
+.rgba-container {
+    width: 150px;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightsteelblue;
+    border-radius: 0.5rem;
+}
+
+.rgba-container div {
+    text-align: center;
+}
+
+.rgba-container h5 {
+    margin: 0;
 }
 
 button {
@@ -71,6 +85,10 @@ button {
     border-radius: 0.5rem;
     border: 0;
     font-family: 'Nunito', sans-serif;
+}
+
+input[type="text"] {
+    width: 15%;
 }
 
 input[type="range"] {
