@@ -1,3 +1,5 @@
+/* Code for creating the initial grid. */
+
 const gridContainer = document.querySelector('.grid-container');
 const clearButton = document.querySelector('.clearButton');
 let gridDimensions = 16;
@@ -43,6 +45,8 @@ function makeGrid() {
 
 makeGrid();
 
+/* Code for clear button. */
+
 let divList = document.getElementsByClassName('square');
 
 clearButton.addEventListener('click',() => {
@@ -50,6 +54,8 @@ clearButton.addEventListener('click',() => {
         divList[i].style.backgroundColor = "whitesmoke";
     }
 });
+
+/* Code for slider control. */
 
 let slider = document.querySelector('.gridValueButton');
 let sliderDisplay = document.querySelector('.gridValueDisplay');
@@ -60,6 +66,8 @@ slider.oninput = () => {
     gridDimensions = slider.value;
 }
 
+/* Code for remaking grid. */
+
 let remakeGridButton = document.querySelector('.remakeGrid');
 
 remakeGridButton.addEventListener('click', () => {
@@ -68,6 +76,8 @@ remakeGridButton.addEventListener('click', () => {
     }
     makeGrid();
 });
+
+/* Code for erase button. */
 
 let eraseButton = document.querySelector('.eraseButton');
 
@@ -80,6 +90,8 @@ eraseButton.addEventListener('click', () => {
         eraseButton.style.backgroundColor = "#313639"
     }
 });
+
+/* Code for displaying chosen RGB color. */
 
 const rgbColorPicker = document.querySelector('.rgb');
 const colorRed = document.querySelector('.color-red');
