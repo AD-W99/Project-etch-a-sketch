@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector('.grid-container');
 const clearButton = document.querySelector('.clearButton');
 let gridDimensions = 16;
+let isEraseTrue = false;
 
 function makeGrid() {
     for (i = 0; i < (gridDimensions ** 2); i++) {
@@ -12,7 +13,11 @@ function makeGrid() {
 
     gridContainer.style.gridTemplate = `repeat(${gridDimensions}, 1fr) / repeat(${gridDimensions}, 1fr)`;
     gridContainer.addEventListener('mouseover', function(e){
-        e.target.style.backgroundColor = "#313639";
+        if (!isEraseTrue) {
+            e.target.style.backgroundColor = "#313639";
+        } else {
+            e.target.style.backgroundColor = "whitesmoke";
+        }
     });
 }
 
@@ -43,3 +48,15 @@ remakeGridButton.addEventListener('click', () => {
     }
     makeGrid();
 });
+
+let eraseButton = document.querySelector('.eraseButton');
+
+eraseButton.addEventListener('click', () => {
+    isEraseTrue = !isEraseTrue;
+
+    if (isEraseTrue) {
+        eraseButton.style.backgroundColor = "#5cd5eb"
+    } else {
+        eraseButton.style.backgroundColor = "#313639"
+    }
+})
