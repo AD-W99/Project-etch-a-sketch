@@ -5,14 +5,14 @@ let gridDimensions = 16;
 function makeGrid() {
     for (i = 0; i < (gridDimensions ** 2); i++) {
         div = document.createElement('div');
-        div.style.backgroundColor = "grey";
+        div.style.backgroundColor = "whitesmoke";
         div.classList.add('square');
         gridContainer.appendChild(div);
     }
 
     gridContainer.style.gridTemplate = `repeat(${gridDimensions}, 1fr) / repeat(${gridDimensions}, 1fr)`;
     gridContainer.addEventListener('mouseover', function(e){
-        e.target.style.backgroundColor = "black";
+        e.target.style.backgroundColor = "#313639";
     });
 }
 
@@ -22,7 +22,7 @@ let divList = document.getElementsByClassName('square');
 
 clearButton.addEventListener('click',() => {
     for (i = 0; i < divList.length; i++) {
-        divList[i].style.backgroundColor = "grey";
+        divList[i].style.backgroundColor = "whitesmoke";
     }
 });
 
@@ -39,7 +39,7 @@ let remakeGridButton = document.querySelector('.remakeGrid');
 
 remakeGridButton.addEventListener('click', () => {
     for (i = 0; i < divList.length; i++) {
-        divList[i].style.backgroundColor = "grey";
+        divList[i].style.backgroundColor = "whitesmoke";
     }
     makeGrid();
 });

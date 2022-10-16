@@ -1,15 +1,26 @@
 body {
     margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    position: relative;
 }
 
 nav {
-    background-color: #313639;
-    padding: 2rem;
+    background-color: white;
+    padding: 2rem 0 1rem;
+    border-bottom: 1px solid lightgray;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 main {
     display: flex;
     justify-content: center;
+    background-color: ghostwhite;
+    margin-top: 9rem;
 }
 
 .grid-container {
@@ -23,11 +34,74 @@ main {
 
 .buttons-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 8px;
 }
 
 .gridValueDisplay {
     margin: 0;
+    color: #313639;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid lightsteelblue;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.changeButtons-container {
+    border: 1px solid lightsteelblue;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+button {
+    background-color: #313639;
+    color: white;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 15rem;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #053a5f;
+    height: 0.5rem;
+}
+
+input[type="range"]::-moz-range-track {
+    background: #053a5f;
+    height: 0.5rem;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: -4px;
+    background-color: #5cd5eb;
+    height: 1rem;
+    width: 1rem;   
+    border-radius: 50%; 
+}
+
+input[type="range"]::-moz-range-thumb {
+    border: none;
+    border-radius: 0;
+    background-color: #5cd5eb;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
 }

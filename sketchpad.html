@@ -4,15 +4,23 @@
         <title>Etch-a-Sketch</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="sketchpad-styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <nav>
                 <div class="buttons-container">
-                    <p class="gridValueDisplay"></p>
-                    <input class="gridValueButton" type="range" min="2" max="100" value="16" step="2">
-                    <button class="remakeGrid">Recreate Sketchpad</button>
-                    <button class="clearButton">Clear Sketchpad</button>
+                    <div class="slider-container">
+                        <p class="gridValueDisplay"></p>
+                        <input class="gridValueButton" type="range" min="2" max="100" value="16" step="2">
+                        <button class="remakeGrid">Remake</button>
+                    </div>
+                    <div class="changeButtons-container">
+                        <button class="clearButton">Clear</button>
+                        <button class="eraseButton">Erase</button>
+                    </div>
                 </div>
             </nav>
         </header>
